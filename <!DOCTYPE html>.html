@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Name - YP ALTI - EC-Council Certified Ethical Hacker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #E21C21;
+            --accent: #ffc107;
+            --bg-white: #ffffff;
+            --text-main: #1a1a1a;
+            --text-muted: #4a4a4a;
+            --border-color: #f0f0f0;
+            --section-light: #fdfdfd;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-white);
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 1.2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--bg-white);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-logos {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-logos img {
+            height: 40px;
+            width: auto;
+            display: block;
+        }
+
+        /* Hero */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px 5%;
+            gap: 60px;
+            background: var(--bg-white);
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            color: var(--text-main);
+        }
+
+        .hero-content p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            max-width: 600px;
+        }
+
+        .hero-image {
+            flex: 1;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 4px;
+            box-shadow: 20px 20px 0px var(--accent);
+        }
+
+        /* Section Headers */
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 0 5%;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            color: var(--text-main);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        .section-header h2::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Benefits Icon Section */
+        .benefits-section {
+            padding: 80px 5%;
+            background: var(--bg-white);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .benefit-card {
+            text-align: center;
+            padding: 30px;
+            transition: 0.3s;
+        }
+
+        .benefit-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .benefit-card h4 {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            color: var(--text-main);
+        }
+
+        .benefit-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Form Section */
+        .form-section {
+            padding: 80px 5%;
+            background: var(--section-light);
+        }
+
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 50px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+
+        /* Buttons */
+        .cta-btn {
+            background: var(--primary);
+            color: white;
+            padding: 18px 36px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            transition: 0.2s;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1rem;
+        }
+
+        .cta-btn:hover {
+            background: #c1181c;
+        }
+
+        /* Application Flow */
+        .flow-container {
+            padding: 80px 5%;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .step-card {
+            background: white;
+            padding: 40px;
+            border: 1px solid var(--border-color);
+        }
+
+        .step-num {
+            font-size: 0.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* Info Grid */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 80px 5%;
+            gap: 40px;
+        }
+
+        .info-box {
+            padding: 40px;
+            border: 1px solid var(--border-color);
+        }
+
+        .info-box h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        /* Accordion */
+        .accordion-wrapper {
+            max-width: 900px;
+            margin: 0 auto 100px;
+            padding: 0 5%;
+        }
+
+        .accordion-item {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .accordion-header {
+            width: 100%;
+            padding: 20px;
+            background: none;
+            border: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .accordion-body {
+            padding: 20px;
+            background: #fafafa;
+        }
+
+        #success-msg {
+            display: none;
+            text-align: center;
+            padding: 40px;
+            background-color: #f8fff9;
+            border: 1px solid #d4edda;
+            border-radius: 4px;
+        }
+
+        footer {
+            padding: 60px 5%;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 992px) {
+            .hero { flex-direction: column; text-align: center; }
+            .steps-grid, .info-grid, .form-row { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-logos">
+        <img src="https://framerusercontent.com/images/K3a8MikP9BPHa1BCvaXBmKAGOU.png?scale-down-to=2048&width=2735&height=1893" alt="Yayasan Peneraju">
+        <img src="https://static.wixstatic.com/media/d17970_e2779e8237ce49b6bd845f2a75c1d9b7~mv2.png/v1/fill/w_624,h_90,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/JS%20Full_typeface%20side_edited.png" alt="JSKILLS">
+    </div>
+    <img src="https://www.eccouncil.org/wp-content/uploads/2022/04/ceh-logo-vector.png" alt="CEH" style="height: 35px;">
+</nav>
+
+<section class="hero">
+    <div class="hero-content">
+        <p style="color: var(--primary); font-weight: 700; text-transform: uppercase; margin-bottom: 10px;">Scholarship Intake 2024/2025</p>
+        <h1>YP ALTI - EC-Council Certified Ethical Hacker</h1>
+        <p>Master the world's most advanced ethical hacking certification. Fully funded for Bumiputera talents seeking a career in elite cybersecurity.</p>
+        <a href="#apply-form" class="cta-btn" style="width: auto;">Apply For Immediate Offer Letter</a>
+    </div>
+    <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800" alt="Cyber Security Professional">
+    </div>
+</section>
+
+<!-- NEW BENEFITS ICON SECTION -->
+<section class="benefits-section">
+    <div class="section-header">
+        <h2>Why Get CEH Certified?</h2>
+        <p>Join the ranks of elite cybersecurity professionals with industry-leading credentials.</p>
+    </div>
+    <div class="benefits-grid">
+        <div class="benefit-card">
+            <i class="fas fa-globe-americas"></i>
+            <h4>Global Recognition</h4>
+            <p>CEH is the most desired cybersecurity certification globally and is recognized by top Fortune 500 companies.</p>
+        </div>
+        <div class="benefit-card">
+            <i class="fas fa-chart-line"></i>
+            <h4>High Earning Potential</h4>
+            <p>Certified Ethical Hackers command significantly higher salaries in the tech industry compared to non-certified peers.</p>
+        </div>
+        <div class="benefit-card">
+            <i class="fas fa-user-shield"></i>
+            <h4>Practical Skillset</h4>
+            <p>Master 500+ unique hacking techniques and tools through hands-on labs and real-world attack simulations.</p>
+        </div>
+        <div class="benefit-card">
+            <i class="fas fa-check-double"></i>
+            <h4>Industry Compliance</h4>
+            <p>Meets strict standards for government, military, and corporate security roles (including DoD 8570 compliance).</p>
+        </div>
+    </div>
+</section>
+
+<section class="form-section" id="apply-form">
+    <div class="section-header">
+        <h2>Eligibility Assessment</h2>
+        <p>Check your qualification for the JSKILLS scholarship programme.</p>
+    </div>
+    <div class="form-container">
+        <form id="scholarshipForm">
+            <div class="form-group">
+                <label>Full Name (as per IC)</label>
+                <input type="text" required placeholder="Full Name">
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>NRIC Number</label>
+                    <input type="text" required placeholder="IC Number">
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" required placeholder="Email Address">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Bumiputera Status</label>
+                <select required>
+                    <option value="">Please select</option>
+                    <option value="yes">Bumiputera</option>
+                    <option value="no">Non-Bumiputera</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Have you received Yayasan Peneraju funding before?</label>
+                <select required>
+                    <option value="no">No, I am a new applicant</option>
+                    <option value="yes">Yes, I am a YP Alumni</option>
+                </select>
+            </div>
+            <button type="submit" class="cta-btn">Submit My Application</button>
+        </form>
+        <div id="success-msg">
+            <h4 style="color: #28a745;">Application Received</h4>
+            <p>The JSKILLS team will review your eligibility. Look out for your Letter of Acceptance within 3 working days.</p>
+        </div>
+    </div>
+</section>
+
+<section class="flow-container">
+    <div class="section-header">
+        <h2>Application Flow</h2>
+    </div>
+    <div class="steps-grid">
+        <div class="step-card"><span class="step-num">01</span><h4>Submit Form</h4><p>Fill in the eligibility assessment above.</p></div>
+        <div class="step-card"><span class="step-num">02</span><h4>JSKILLS Review</h4><p>Receive your Letter of Acceptance within 3 days if qualified.</p></div>
+        <div class="step-card"><span class="step-num">03</span><h4>Peneraju Financing</h4><p>Apply at Peneraju.org with CTC copies of IC, Birth Cert, and Bank Statement.</p></div>
+        <div class="step-card"><span class="step-num">04</span><h4>Approval</h4><p>Get approved within 30 days and complete EFSA with ALTI LO.</p></div>
+        <div class="step-card"><span class="step-num">05</span><h4>Disbursement</h4><p>Funds released to your account within 20 days for payment to JSKILLS.</p></div>
+        <div class="step-card"><span class="step-num">06</span><h4>Training</h4><p>Begin your professional certification journey.</p></div>
+    </div>
+</section>
+
+<section class="info-grid">
+    <div class="info-box">
+        <h3>Eligibility & Coverage</h3>
+        <p>Bumiputera Malaysian citizens aged 16 and above. Coverage includes:</p>
+        <ul style="margin: 15px 0; padding-left: 20px;">
+            <li>Full Training/Tuition fees</li>
+            <li>Examination & Certification fees</li>
+            <li>Professional fees & Allowances *</li>
+        </ul>
+    </div>
+    <div class="info-box">
+        <h3>Alumni Criteria</h3>
+        <p>For those who completed a previous YP programme:</p>
+        <ul style="margin: 15px 0; padding-left: 20px;">
+            <li>Repaid at least 50% of previous funding</li>
+            <li>Total lifetime funding limit: RM150,000</li>
+        </ul>
+    </div>
+</section>
+
+<div class="section-header"><h2>Course Curriculum</h2><p>20 Modules of Intensive Training</p></div>
+<div class="accordion-wrapper" id="accordion"></div>
+
+<footer>
+    <p>&copy; 2024 JSKILLS & Yayasan Peneraju Authorized Partners.</p>
+</footer>
+
+<script>
+    // Mock Form Logic
+    document.getElementById('scholarshipForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        this.style.display = 'none';
+        document.getElementById('success-msg').style.display = 'block';
+    });
+
+    // Modules Data
+    const modules = [
+        { t: "Module 1: Intro to Ethical Hacking", d: "Fundamentals of info security and legal procedures." },
+        { t: "Module 2: Footprinting & Reconnaissance", d: "Pre-attack techniques and latest reconnaissance tools." },
+        { t: "Module 3: Scanning Networks", d: "Network scanning techniques and countermeasures." },
+        { t: "Module 4: Enumeration", d: "BGP and NFS exploits and associated defenses." },
+        { t: "Module 5: Vulnerability Analysis", d: "Identifying loopholes in networks and systems." },
+        { t: "Module 6: System Hacking", d: "Methodologies for steganography and covering tracks." },
+        { t: "Module 7: Malware Threats", d: "Analysis of Trojans, viruses, and APT fileless malware." },
+        { t: "Module 8: Sniffing", d: "Packet sniffing techniques and vulnerability discovery." },
+        { t: "Module 9: Social Engineering", d: "Human-level vulnerabilities and identity theft auditing." },
+        { t: "Module 10: Denial-of-Service", d: "DoS/DDoS attack techniques and tools." },
+        { t: "Module 11: Session Hijacking", d: "Authentication and authorization weakness discovery." },
+        { t: "Module 12: Evading IDS/Firewalls", d: "Tools to audit network perimeters and evasion techniques." },
+        { t: "Module 13: Hacking Web Servers", d: "Audit methodologies for web server infrastructures." },
+        { t: "Module 14: Hacking Web Applications", d: "Vulnerability methodology for web applications." },
+        { t: "Module 15: SQL Injection", d: "SQLi attack techniques and evasion." },
+        { t: "Module 16: Hacking Wireless Networks", d: "Threats and tools for wireless network security." },
+        { t: "Module 17: Hacking Mobile Platforms", d: "Android and iOS security and attack vectors." },
+        { t: "Module 18: IoT Hacking", d: "Operational technology (OT) and IoT attack methods." },
+        { t: "Module 19: Cloud Computing", d: "Container security and serverless computing threats." },
+        { t: "Module 20: Cryptography", d: "Encryption algorithms, PKI, and cryptanalysis tools." }
+    ];
+
+    const accContainer = document.getElementById('accordion');
+    modules.forEach((m, i) => {
+        const item = document.createElement('div');
+        item.className = 'accordion-item';
+        item.innerHTML = `
+            <button class="accordion-header">${m.t} <i class="fas fa-chevron-down"></i></button>
+            <div class="accordion-content"><div class="accordion-body">${m.d}</div></div>
+        `;
+        accContainer.appendChild(item);
+        item.querySelector('.accordion-header').addEventListener('click', function() {
+            const content = this.nextElementSibling;
+            const open = content.style.maxHeight;
+            document.querySelectorAll('.accordion-content').forEach(c => c.style.maxHeight = null);
+            if (!open) content.style.maxHeight = content.scrollHeight + "px";
+        });
+    });
+</script>
+
+</body>
+</html>
