@@ -53,7 +53,6 @@
         .nav-logos img {
             height: 40px;
             width: auto;
-            display: block;
         }
 
         /* Hero */
@@ -74,14 +73,6 @@
             font-size: 3rem;
             line-height: 1.1;
             margin-bottom: 25px;
-            color: var(--text-main);
-        }
-
-        .hero-content p {
-            font-size: 1.15rem;
-            color: var(--text-muted);
-            margin-bottom: 40px;
-            max-width: 600px;
         }
 
         .hero-image {
@@ -97,13 +88,12 @@
         /* Section Headers */
         .section-header {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
             padding: 0 5%;
         }
 
         .section-header h2 {
             font-size: 2.2rem;
-            color: var(--text-main);
             position: relative;
             display: inline-block;
             padding-bottom: 15px;
@@ -120,10 +110,26 @@
             transform: translateX(-50%);
         }
 
-        /* Benefits Icon Section */
+        /* Embed Form Section */
+        .form-section {
+            padding: 80px 5%;
+            background: var(--section-light);
+        }
+
+        .form-embed-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            min-height: 950px; /* Aligned with data-height="934" */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        /* Benefits */
         .benefits-section {
             padding: 80px 5%;
-            background: var(--bg-white);
         }
 
         .benefits-grid {
@@ -135,90 +141,18 @@
         .benefit-card {
             text-align: center;
             padding: 30px;
-            transition: 0.3s;
         }
 
         .benefit-card i {
             font-size: 2.5rem;
             color: var(--primary);
             margin-bottom: 20px;
-            display: block;
         }
 
-        .benefit-card h4 {
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-            color: var(--text-main);
-        }
-
-        .benefit-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        /* Form Section */
-        .form-section {
-            padding: 80px 5%;
-            background: var(--section-light);
-        }
-
-        .form-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #ffffff;
-            padding: 50px;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        label {
-            display: block;
-            font-weight: 600;
-            margin-bottom: 8px;
-            font-size: 0.9rem;
-        }
-
-        input, select, textarea {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-family: inherit;
-        }
-
-        /* Buttons */
-        .cta-btn {
-            background: var(--primary);
-            color: white;
-            padding: 18px 36px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 700;
-            display: inline-block;
-            transition: 0.2s;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-            font-size: 1rem;
-        }
-
-        .cta-btn:hover {
-            background: #c1181c;
-        }
-
-        /* Application Flow */
+        /* Flow */
         .flow-container {
             padding: 80px 5%;
+            background: var(--section-light);
         }
 
         .steps-grid {
@@ -234,14 +168,13 @@
         }
 
         .step-num {
-            font-size: 0.8rem;
             font-weight: 800;
             color: var(--primary);
-            margin-bottom: 10px;
             display: block;
+            margin-bottom: 10px;
         }
 
-        /* Info Grid */
+        /* Criteria */
         .info-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -280,6 +213,7 @@
             align-items: center;
             cursor: pointer;
             font-weight: 600;
+            text-align: left;
         }
 
         .accordion-content {
@@ -291,15 +225,7 @@
         .accordion-body {
             padding: 20px;
             background: #fafafa;
-        }
-
-        #success-msg {
-            display: none;
-            text-align: center;
-            padding: 40px;
-            background-color: #f8fff9;
-            border: 1px solid #d4edda;
-            border-radius: 4px;
+            color: var(--text-muted);
         }
 
         footer {
@@ -312,7 +238,7 @@
 
         @media (max-width: 992px) {
             .hero { flex-direction: column; text-align: center; }
-            .steps-grid, .info-grid, .form-row { grid-template-columns: 1fr; }
+            .steps-grid, .info-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -328,88 +254,66 @@
 
 <section class="hero">
     <div class="hero-content">
-        <p style="color: var(--primary); font-weight: 700; text-transform: uppercase; margin-bottom: 10px;">Scholarship Intake 2024/2025</p>
+        <p style="color: var(--primary); font-weight: 700; text-transform: uppercase; margin-bottom: 10px;">Scholarship Offering</p>
         <h1>YP ALTI - EC-Council Certified Ethical Hacker</h1>
-        <p>Master the world's most advanced ethical hacking certification. Fully funded for Bumiputera talents seeking a career in elite cybersecurity.</p>
-        <a href="#apply-form" class="cta-btn" style="width: auto;">Apply For Immediate Offer Letter</a>
+        <p>Advance your career with the world's leading ethical hacking certification. Fully funded for qualified Bumiputera talents.</p>
+        <a href="#apply-now" class="cta-link" style="background: var(--primary); color: white; padding: 15px 30px; text-decoration: none; border-radius: 4px; font-weight: 700; display: inline-block;">Apply For Eligibility</a>
     </div>
     <div class="hero-image">
-        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800" alt="Cyber Security Professional">
+        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800" alt="Cybersecurity">
     </div>
 </section>
 
-<!-- NEW BENEFITS ICON SECTION -->
+<!-- BENEFITS SECTION -->
 <section class="benefits-section">
     <div class="section-header">
-        <h2>Why Get CEH Certified?</h2>
-        <p>Join the ranks of elite cybersecurity professionals with industry-leading credentials.</p>
+        <h2>Professional Benefits</h2>
+        <p>Why the CEH certification is the industry standard for cybersecurity professionals.</p>
     </div>
     <div class="benefits-grid">
         <div class="benefit-card">
-            <i class="fas fa-globe-americas"></i>
-            <h4>Global Recognition</h4>
-            <p>CEH is the most desired cybersecurity certification globally and is recognized by top Fortune 500 companies.</p>
+            <i class="fas fa-shield-alt"></i>
+            <h4>Elite Recognition</h4>
+            <p>Become part of a globally recognized group of information security professionals.</p>
         </div>
         <div class="benefit-card">
-            <i class="fas fa-chart-line"></i>
-            <h4>High Earning Potential</h4>
-            <p>Certified Ethical Hackers command significantly higher salaries in the tech industry compared to non-certified peers.</p>
+            <i class="fas fa-laptop-code"></i>
+            <h4>Hands-on Expertise</h4>
+            <p>Master 20 of the most current security domains and hacking techniques.</p>
         </div>
         <div class="benefit-card">
-            <i class="fas fa-user-shield"></i>
-            <h4>Practical Skillset</h4>
-            <p>Master 500+ unique hacking techniques and tools through hands-on labs and real-world attack simulations.</p>
-        </div>
-        <div class="benefit-card">
-            <i class="fas fa-check-double"></i>
-            <h4>Industry Compliance</h4>
-            <p>Meets strict standards for government, military, and corporate security roles (including DoD 8570 compliance).</p>
+            <i class="fas fa-briefcase"></i>
+            <h4>Career Advancement</h4>
+            <p>Qualify for high-level security roles in government and private sectors.</p>
         </div>
     </div>
 </section>
 
-<section class="form-section" id="apply-form">
+<!-- FORM SECTION WITH YOUR EMBED CODE -->
+<section class="form-section" id="apply-now">
     <div class="section-header">
         <h2>Eligibility Assessment</h2>
-        <p>Check your qualification for the JSKILLS scholarship programme.</p>
+        <p>Complete the official JSKILLS & Yayasan Peneraju application form below.</p>
     </div>
-    <div class="form-container">
-        <form id="scholarshipForm">
-            <div class="form-group">
-                <label>Full Name (as per IC)</label>
-                <input type="text" required placeholder="Full Name">
-            </div>
-            <div class="form-row">
-                <div class="form-group">
-                    <label>NRIC Number</label>
-                    <input type="text" required placeholder="IC Number">
-                </div>
-                <div class="form-group">
-                    <label>Email Address</label>
-                    <input type="email" required placeholder="Email Address">
-                </div>
-            </div>
-            <div class="form-group">
-                <label>Bumiputera Status</label>
-                <select required>
-                    <option value="">Please select</option>
-                    <option value="yes">Bumiputera</option>
-                    <option value="no">Non-Bumiputera</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>Have you received Yayasan Peneraju funding before?</label>
-                <select required>
-                    <option value="no">No, I am a new applicant</option>
-                    <option value="yes">Yes, I am a YP Alumni</option>
-                </select>
-            </div>
-            <button type="submit" class="cta-btn">Submit My Application</button>
-        </form>
-        <div id="success-msg">
-            <h4 style="color: #28a745;">Application Received</h4>
-            <p>The JSKILLS team will review your eligibility. Look out for your Letter of Acceptance within 3 working days.</p>
-        </div>
+    <div class="form-embed-container">
+        <iframe
+            src="https://campaign.revops-center.com/widget/form/m9Y5v7RnF8IwzJEMbVv9"
+            style="width:100%;height:100%;border:none;border-radius:3px"
+            id="inline-m9Y5v7RnF8IwzJEMbVv9" 
+            data-layout="{'id':'INLINE'}"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="Yayasan PENERAJU Form"
+            data-height="934"
+            data-layout-iframe-id="inline-m9Y5v7RnF8IwzJEMbVv9"
+            data-form-id="m9Y5v7RnF8IwzJEMbVv9"
+            title="Yayasan PENERAJU Form">
+        </iframe>
+        <script src="https://campaign.revops-center.com/js/form_embed.js"></script>
     </div>
 </section>
 
@@ -418,51 +322,34 @@
         <h2>Application Flow</h2>
     </div>
     <div class="steps-grid">
-        <div class="step-card"><span class="step-num">01</span><h4>Submit Form</h4><p>Fill in the eligibility assessment above.</p></div>
+        <div class="step-card"><span class="step-num">01</span><h4>Submit Form</h4><p>Complete the assessment form above.</p></div>
         <div class="step-card"><span class="step-num">02</span><h4>JSKILLS Review</h4><p>Receive your Letter of Acceptance within 3 days if qualified.</p></div>
-        <div class="step-card"><span class="step-num">03</span><h4>Peneraju Financing</h4><p>Apply at Peneraju.org with CTC copies of IC, Birth Cert, and Bank Statement.</p></div>
-        <div class="step-card"><span class="step-num">04</span><h4>Approval</h4><p>Get approved within 30 days and complete EFSA with ALTI LO.</p></div>
-        <div class="step-card"><span class="step-num">05</span><h4>Disbursement</h4><p>Funds released to your account within 20 days for payment to JSKILLS.</p></div>
-        <div class="step-card"><span class="step-num">06</span><h4>Training</h4><p>Begin your professional certification journey.</p></div>
+        <div class="step-card"><span class="step-num">03</span><h4>Financing</h4><p>Apply at Peneraju.org with CTC copies of IC, Birth Cert, and Bank Statement.</p></div>
+        <div class="step-card"><span class="step-num">04</span><h4>Approval</h4><p>Receive approval within 30 days and complete EFSA.</p></div>
+        <div class="step-card"><span class="step-num">05</span><h4>Disbursement</h4><p>Funds released to your account within 20 days for JSKILLS payment.</p></div>
+        <div class="step-card"><span class="step-num">06</span><h4>Start</h4><p>Begin your certification journey.</p></div>
     </div>
 </section>
 
 <section class="info-grid">
     <div class="info-box">
         <h3>Eligibility & Coverage</h3>
-        <p>Bumiputera Malaysian citizens aged 16 and above. Coverage includes:</p>
-        <ul style="margin: 15px 0; padding-left: 20px;">
-            <li>Full Training/Tuition fees</li>
-            <li>Examination & Certification fees</li>
-            <li>Professional fees & Allowances *</li>
-        </ul>
+        <p>Bumiputera Malaysian citizens aged 16+. Includes full tuition, examination fees, and professional allowances.*</p>
     </div>
     <div class="info-box">
         <h3>Alumni Criteria</h3>
-        <p>For those who completed a previous YP programme:</p>
-        <ul style="margin: 15px 0; padding-left: 20px;">
-            <li>Repaid at least 50% of previous funding</li>
-            <li>Total lifetime funding limit: RM150,000</li>
-        </ul>
+        <p>For previous YP recipients: 50% repayment of previous funding required. Lifetime funding limit of RM150,000 applies.</p>
     </div>
 </section>
 
-<div class="section-header"><h2>Course Curriculum</h2><p>20 Modules of Intensive Training</p></div>
+<div class="section-header"><h2>Course Curriculum</h2></div>
 <div class="accordion-wrapper" id="accordion"></div>
 
 <footer>
-    <p>&copy; 2024 JSKILLS & Yayasan Peneraju Authorized Partners.</p>
+    <p>&copy; 2024 JSKILLS & Yayasan Peneraju. All Rights Reserved.</p>
 </footer>
 
 <script>
-    // Mock Form Logic
-    document.getElementById('scholarshipForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        this.style.display = 'none';
-        document.getElementById('success-msg').style.display = 'block';
-    });
-
-    // Modules Data
     const modules = [
         { t: "Module 1: Intro to Ethical Hacking", d: "Fundamentals of info security and legal procedures." },
         { t: "Module 2: Footprinting & Reconnaissance", d: "Pre-attack techniques and latest reconnaissance tools." },
@@ -486,20 +373,18 @@
         { t: "Module 20: Cryptography", d: "Encryption algorithms, PKI, and cryptanalysis tools." }
     ];
 
-    const accContainer = document.getElementById('accordion');
-    modules.forEach((m, i) => {
+    const acc = document.getElementById('accordion');
+    modules.forEach((m) => {
         const item = document.createElement('div');
         item.className = 'accordion-item';
-        item.innerHTML = `
-            <button class="accordion-header">${m.t} <i class="fas fa-chevron-down"></i></button>
-            <div class="accordion-content"><div class="accordion-body">${m.d}</div></div>
-        `;
-        accContainer.appendChild(item);
+        item.innerHTML = `<button class="accordion-header">${m.t} <i class="fas fa-plus"></i></button>
+                          <div class="accordion-content"><div class="accordion-body">${m.d}</div></div>`;
+        acc.appendChild(item);
         item.querySelector('.accordion-header').addEventListener('click', function() {
             const content = this.nextElementSibling;
-            const open = content.style.maxHeight;
+            const isOpen = content.style.maxHeight;
             document.querySelectorAll('.accordion-content').forEach(c => c.style.maxHeight = null);
-            if (!open) content.style.maxHeight = content.scrollHeight + "px";
+            if (!isOpen) content.style.maxHeight = content.scrollHeight + "px";
         });
     });
 </script>
