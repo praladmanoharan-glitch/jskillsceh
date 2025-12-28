@@ -84,6 +84,22 @@
             border-radius: 4px;
             box-shadow: 20px 20px 0px var(--accent);
         }
+        /* Update this in your <style> section */
+.hero-content p {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    margin-bottom: 35px; /* This adds the space you need */
+    max-width: 600px;
+}
+
+/* Ensure the button doesn't feel stuck to the text on mobile */
+@media (max-width: 992px) {
+    .hero-content p {
+        margin-bottom: 25px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 
         /* Section Headers */
         .section-header {
