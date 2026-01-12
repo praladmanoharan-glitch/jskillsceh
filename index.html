@@ -54,29 +54,12 @@
         }
 
         .hero-content { flex: 1; }
-        .hero-content h1 { 
-            font-size: 3.5rem; 
-            line-height: 1.1; 
-            margin-bottom: 25px; 
-            font-weight: 800;
-        }
-
+        .hero-content h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 25px; font-weight: 800; }
         .hero-content span.highlight { color: var(--primary); }
-
-        .hero-content p.hero-description { 
-            font-size: 1.25rem; 
-            color: var(--text-muted); 
-            margin-bottom: 50px; /* Space for button */
-            max-width: 600px; 
-        }
+        .hero-content p.hero-description { font-size: 1.25rem; color: var(--text-muted); margin-bottom: 50px; max-width: 600px; }
 
         .hero-image { flex: 1; text-align: right; }
-        .hero-image img { 
-            width: 100%; 
-            max-width: 550px;
-            border-radius: 12px; 
-            box-shadow: 25px 25px 0px var(--accent); 
-        }
+        .hero-image img { width: 100%; max-width: 550px; border-radius: 12px; box-shadow: 25px 25px 0px var(--accent); }
 
         .cta-btn-hero {
             background: var(--primary);
@@ -90,44 +73,74 @@
             transition: 0.3s;
         }
 
-        /* GAIN/VALUE SECTION */
-        .value-section { padding: 100px 5%; background: var(--text-main); color: white; }
-        .value-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px; }
-        .value-card { padding: 40px; border-top: 4px solid var(--accent); background: rgba(255,255,255,0.05); }
-        .value-card i { font-size: 2rem; color: var(--accent); margin-bottom: 20px; display: block; }
-        .value-card h3 { margin-bottom: 15px; font-size: 1.4rem; }
-        .value-card p { color: #ccc; font-size: 0.95rem; }
-
-        /* OUTCOMES */
+        /* OUTCOMES SECTION - REVAMPED */
+        .outcomes-section { padding: 100px 5%; background: var(--section-light); }
         .section-header { text-align: center; margin-bottom: 60px; padding: 0 5%; }
         .section-header h2 { font-size: 2.8rem; font-weight: 800; }
         .section-header span { color: var(--primary); }
 
         .outcomes-grid { 
             display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
             gap: 25px; 
-            padding: 0 5% 100px;
             max-width: 1200px;
             margin: 0 auto;
         }
-        .outcome-item { display: flex; gap: 20px; padding: 30px; border: 1px solid var(--border-color); border-radius: 8px; }
-        .outcome-item i { color: var(--primary); font-size: 1.5rem; }
 
-        /* FORM SECTION - REINTEGRATED */
-        .form-section { padding: 100px 5%; background: var(--section-light); }
+        .outcome-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .outcome-card:hover { transform: translateY(-5px); border-color: var(--accent); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+
+        .outcome-icon {
+            width: 60px;
+            height: 60px;
+            background: #fff9e6;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+
+        .outcome-icon i { font-size: 1.8rem; color: var(--primary); }
+
+        .outcome-card h4 { font-size: 1.3rem; margin-bottom: 15px; line-height: 1.3; }
+        .outcome-card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 25px; flex-grow: 1; }
+
+        .tool-stack {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .tool-stack span { font-size: 0.75rem; font-weight: 700; color: #999; text-transform: uppercase; }
+        .tool-tag { font-size: 0.7rem; font-weight: 600; background: #f0f0f0; padding: 4px 10px; border-radius: 4px; color: var(--text-muted); }
+
+        /* FORM SECTION */
+        .form-section { padding: 100px 5%; background: white; }
         .form-embed-container { 
             max-width: 934px; 
             margin: 0 auto; 
             background: white; 
-            min-height: 950px; /* Important for form visibility */
+            min-height: 950px; 
             border: 2px solid var(--border-color);
             border-radius: 8px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.05);
         }
 
-        /* INFO & ELIGIBILITY */
-        .info-grid { display: grid; grid-template-columns: 1fr 1fr; padding: 100px 5%; gap: 40px; }
+        /* ELIGIBILITY & STRUCTURE */
+        .info-grid { display: grid; grid-template-columns: 1fr 1fr; padding: 100px 5%; gap: 40px; background: var(--section-light); }
         .info-box { padding: 50px; border-radius: 8px; border: 1px solid var(--border-color); background: white; }
         .info-box h3 { color: var(--primary); margin-bottom: 30px; font-size: 1.8rem; border-left: 5px solid var(--accent); padding-left: 20px;}
         .list-item { margin-bottom: 15px; padding-left: 30px; position: relative; font-weight: 500; }
@@ -143,8 +156,6 @@
 
         @media (max-width: 992px) {
             .hero { flex-direction: column; text-align: center; }
-            .hero-content h1 { font-size: 2.5rem; }
-            .hero-image { text-align: center; }
             .outcomes-grid, .info-grid, .flow-grid { grid-template-columns: 1fr; }
         }
     </style>
@@ -163,84 +174,93 @@
     <div class="hero-content">
         <p style="color: var(--primary); font-weight: 800; text-transform: uppercase; margin-bottom: 15px; letter-spacing: 2px;">Supported by YP ALTI</p>
         <h1>Master Gen AI & <span class="highlight">Prompt Engineering</span></h1>
-        <p class="hero-description">Position yourself at the forefront of AI adoption. Empowering Bumiputera talent with high-demand skills to scale careers in line with Malaysia’s national workforce agenda.</p>
-        <a href="#apply-now" class="cta-btn-hero">Apply For Eligibility</a>
+        <p class="hero-description">Transform from a casual user to a professional AI engineer. Learn the strategic frameworks to command AI systems and scale your career productivity.</p>
+        <a href="#apply-now" class="cta-btn-hero">Start Application</a>
     </div>
     <div class="hero-image">
-        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800" alt="Artificial Intelligence Professional">
+        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800" alt="Artificial Intelligence Mastery">
     </div>
 </section>
 
-<!-- THE GAIN SECTION -->
-<section class="value-section">
-    <div class="section-header" style="text-align: left; color: white;">
-        <h2 style="color: white;">Why This Program <span>Matters</span></h2>
-        <p style="color: #ccc; margin-top: 15px;">The true value of AI lies not in the technology itself — but in how you use it.</p>
-    </div>
-    <div class="value-grid">
-        <div class="value-card">
-            <i class="fas fa-microchip"></i>
-            <h3>Precision Control</h3>
-            <p>Go beyond basic interactions. Learn to control AI outputs with precision using structured Prompt Engineering techniques.</p>
-        </div>
-        <div class="value-card">
-            <i class="fas fa-chart-line"></i>
-            <h3>Scale Productivity</h3>
-            <p>Increase productivity and improve decision-making quality across all workflows without technical complexity.</p>
-        </div>
-        <div class="value-card">
-            <h3>Future-Ready</h3>
-            <p>Align your skills with Malaysia’s national AI workforce agenda for 2026 and secure your professional future.</p>
-        </div>
-    </div>
-</section>
-
-<!-- OUTCOMES -->
+<!-- REVAMPED LEARNING OUTCOMES -->
 <section class="outcomes-section">
     <div class="section-header">
-        <h2>Key Learning <span>Outcomes</span></h2>
-        <p>Skills you will master during this 5-day professional upskilling program</p>
+        <h2>What You Will <span>Gain</span></h2>
+        <p>Master the 5 pillars of modern Generative AI engineering</p>
     </div>
     <div class="outcomes-grid">
-        <div class="outcome-item">
-            <i class="fas fa-check"></i>
-            <div>
-                <h4>Prompt Architecture</h4>
-                <p>Design structured and effective prompts for diverse business scenarios.</p>
+        
+        <!-- Outcome 1 -->
+        <div class="outcome-card">
+            <div class="outcome-icon"><i class="fas fa-microchip"></i></div>
+            <h4>Structured Prompt Architecture</h4>
+            <p>Design and deploy effective prompts tailored for diverse business scenarios, moving beyond basic chat to complex commands.</p>
+            <div class="tool-stack">
+                <span>Tools:</span>
+                <div class="tool-tag">ChatGPT-4o</div>
+                <div class="tool-tag">Claude 3.5</div>
             </div>
         </div>
-        <div class="outcome-item">
-            <i class="fas fa-check"></i>
-            <div>
-                <h4>AI Optimization</h4>
-                <p>Optimize AI responses for clarity, accuracy, and professional reliability.</p>
+
+        <!-- Outcome 2 -->
+        <div class="outcome-card">
+            <div class="outcome-icon"><i class="fas fa-vial"></i></div>
+            <h4>Response Optimization</h4>
+            <p>Master the art of iterative refinement to ensure AI outputs meet professional standards for clarity, accuracy, and reliability.</p>
+            <div class="tool-stack">
+                <span>Tools:</span>
+                <div class="tool-tag">Gemini Pro</div>
+                <div class="tool-tag">Perplexity</div>
             </div>
         </div>
-        <div class="outcome-item">
-            <i class="fas fa-check"></i>
-            <div>
-                <h4>Business Automation</h4>
-                <p>Apply GenAI tools to enhance productivity and professional automation.</p>
+
+        <!-- Outcome 3 -->
+        <div class="outcome-card">
+            <div class="outcome-icon"><i class="fas fa-rocket"></i></div>
+            <h4>Workflow Automation</h4>
+            <p>Integrate GenAI tools into your daily professional stack to enhance productivity and automate repetitive manual tasks.</p>
+            <div class="tool-stack">
+                <span>Tools:</span>
+                <div class="tool-tag">Zapier</div>
+                <div class="tool-tag">Make.com</div>
             </div>
         </div>
-        <div class="outcome-item">
-            <i class="fas fa-check"></i>
-            <div>
-                <h4>Strategic Integration</h4>
-                <p>Confidently leverage AI technologies within operational and strategic roles.</p>
+
+        <!-- Outcome 4 -->
+        <div class="outcome-card">
+            <div class="outcome-icon"><i class="fas fa-chart-pie"></i></div>
+            <h4>Strategic Decision-Making</h4>
+            <p>Utilize AI insights to drive high-level strategic planning and optimize operational decision-making processes.</p>
+            <div class="tool-stack">
+                <span>Tools:</span>
+                <div class="tool-tag">Copilot</div>
+                <div class="tool-tag">Julius AI</div>
             </div>
         </div>
+
+        <!-- Outcome 5 -->
+        <div class="outcome-card">
+            <div class="outcome-icon"><i class="fas fa-user-shield"></i></div>
+            <h4>Professional AI Integration</h4>
+            <p>Confidently leverage AI technologies within your specific professional role to lead digital transformation in your organization.</p>
+            <div class="tool-stack">
+                <span>Focus:</span>
+                <div class="tool-tag">AI Ethics</div>
+                <div class="tool-tag">Security</div>
+            </div>
+        </div>
+
     </div>
 </section>
 
-<!-- APPLICATION FORM - ORIGINAL EMBED INTEGRATED -->
+<!-- FORM SECTION - INTEGRATED -->
 <section class="form-section" id="apply-now">
     <div class="section-header">
-        <h2>Start Your <span>Application</span></h2>
-        <p>Step 1: Complete the registration form below to check your eligibility.</p>
+        <h2>Begin Your <span>Journey</span></h2>
+        <p>Check your eligibility for JSKILLS & YP ALTI financing below.</p>
     </div>
     <div class="form-embed-container">
-        <!-- YOUR ORIGINAL FORM EMBED CODE START -->
+        <!-- ORIGINAL EMBED CODE -->
         <iframe
             src="https://campaign.revops-center.com/widget/form/m9Y5v7RnF8IwzJEMbVv9"
             style="width:100%;height:100%;border:none;border-radius:3px"
@@ -260,7 +280,6 @@
         >
         </iframe>
         <script src="https://campaign.revops-center.com/js/form_embed.js"></script>
-        <!-- YOUR ORIGINAL FORM EMBED CODE END -->
     </div>
 </section>
 
@@ -269,16 +288,16 @@
     <div class="info-box">
         <h3>Eligibility Criteria</h3>
         <div class="list-item">Be a Malaysian Bumiputera.</div>
-        <div class="list-item">Hold an active individual bank account under applicant’s name.</div>
-        <div class="list-item">Possess a Diploma with min. 1 year related experience (or equivalent).</div>
-        <div class="list-item">Be able to commit fully to the program duration.</div>
+        <div class="list-item">Active individual bank account in your name.</div>
+        <div class="list-item">Diploma with min. 1 year related experience (or equivalent).</div>
+        <div class="list-item">Commitment to the full 5-day online program.</div>
     </div>
     <div class="info-box">
         <h3>Program Overview</h3>
         <div class="list-item"><strong>Duration:</strong> 5 Days (Fully Online).</div>
-        <div class="list-item"><strong>Fee:</strong> RM3,500.00 (Incl. Exam Fee & 8% SST).</div>
+        <div class="list-item"><strong>Fee:</strong> RM3,500.00 (Incl. Exam & 8% SST).</div>
         <div class="list-item"><strong>Financial Support:</strong> YP ALTI financing & EPP available.</div>
-        <div class="list-item"><strong>For:</strong> Professionals, Diploma/Degree holders, & Business leaders.</div>
+        <div class="list-item"><strong>Mode:</strong> Hands-on strategic prompt frameworks.</div>
     </div>
 </section>
 
@@ -290,11 +309,11 @@
     </div>
     <div class="flow-grid">
         <div class="flow-card"><span class="flow-num">1</span><h4>Apply at JSKILLS</h4><p>Submit your application via the form above.</p></div>
-        <div class="flow-card"><span class="flow-num">2</span><h4>Acceptance</h4><p>JSKILLS reviews your application and issues a Letter of Acceptance within 3 days.</p></div>
-        <div class="flow-card"><span class="flow-num">3</span><h4>Peneraju financing</h4><p>Apply at Peneraju.org with CTC copies of Birth Cert, NRIC, and Bank Statement.</p></div>
-        <div class="flow-card"><span class="flow-num">4</span><h4>Approval</h4><p>Receive approval within 30 days. Complete EFSA with ALTI LO within 7 days.</p></div>
-        <div class="flow-card"><span class="flow-num">5</span><h4>Funds</h4><p>Funds disbursed to your account within 20 days. Finalize payment to JSKILLS.</p></div>
-        <div class="flow-card"><span class="flow-num">6</span><h4>Start</h4><p>Begin your certification journey with no financial stress.</p></div>
+        <div class="flow-card"><span class="flow-num">2</span><h4>Acceptance</h4><p>Receive your Letter of Acceptance within 3 days after review.</p></div>
+        <div class="flow-card"><span class="flow-num">3</span><h4>Financing</h4><p>Apply at Peneraju.org with CTC copies of IC, Birth Cert, and Bank Statement.</p></div>
+        <div class="flow-card"><span class="flow-num">4</span><h4>Approval</h4><p>Get approved within 30 days. Upload EFSA within 7 days.</p></div>
+        <div class="flow-card"><span class="flow-num">5</span><h4>Receive Funds</h4><p>Funds disbursed to your account within 20 days. Pay back to JSKILLS.</p></div>
+        <div class="flow-card"><span class="flow-num">6</span><h4>Start</h4><p>Begin your professional certification with no upfront burden.</p></div>
     </div>
 </section>
 
