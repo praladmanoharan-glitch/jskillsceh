@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Program Name - YP ALTI - EC-Council Certified Ethical Hacker</title>
+    <title>Gen AI & Prompt Engineering - YP ALTI | JSKILLS</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
@@ -41,9 +41,9 @@
         }
 
         .nav-logos { display: flex; align-items: center; gap: 30px; }
-        .nav-logos img { height: 40px; width: auto; }
+        .nav-logos img { height: 45px; width: auto; }
 
-        /* HERO SECTION - FIXED SPACING */
+        /* HERO SECTION */
         .hero {
             display: flex;
             align-items: center;
@@ -54,28 +54,11 @@
         }
 
         .hero-content { flex: 1; }
-
-        .hero-content h1 {
-            font-size: 3rem;
-            line-height: 1.1;
-            margin-bottom: 25px;
-            color: var(--text-main);
-        }
-
-        /* Fixed: Added significant margin here to stop it from feeling cramped */
-        .hero-content p.hero-description {
-            font-size: 1.15rem;
-            color: var(--text-muted);
-            margin-bottom: 50px; 
-            max-width: 600px;
-        }
+        .hero-content h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 25px; }
+        .hero-content p.hero-description { font-size: 1.15rem; color: var(--text-muted); margin-bottom: 50px; max-width: 600px; }
 
         .hero-image { flex: 1; }
-        .hero-image img {
-            width: 100%;
-            border-radius: 4px;
-            box-shadow: 20px 20px 0px var(--accent);
-        }
+        .hero-image img { width: 100%; border-radius: 4px; box-shadow: 20px 20px 0px var(--accent); }
 
         .cta-btn-hero {
             background: var(--primary);
@@ -88,78 +71,31 @@
             transition: 0.3s;
         }
 
-        .cta-btn-hero:hover {
-            background: #c1181c;
-            transform: translateY(-2px);
-        }
+        /* APPLICATION FLOW */
+        .flow-section { padding: 80px 5%; background: var(--section-light); }
+        .section-header { text-align: center; margin-bottom: 50px; }
+        .section-header h2 { font-size: 2.2rem; position: relative; display: inline-block; padding-bottom: 15px; }
+        .section-header h2::after { content: ''; width: 80px; height: 4px; background: var(--accent); position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
 
-        .section-header {
-            text-align: center;
-            margin-bottom: 50px;
-            padding: 0 5%;
-        }
-
-        .section-header h2 {
-            font-size: 2.2rem;
-            position: relative;
-            display: inline-block;
-            padding-bottom: 15px;
-        }
-
-        .section-header h2::after {
-            content: '';
-            width: 80px;
-            height: 4px;
-            background: var(--accent);
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-        }
+        .flow-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+        .flow-card { background: white; padding: 30px; border: 1px solid var(--border-color); border-radius: 4px; position: relative; }
+        .flow-num { color: var(--primary); font-weight: 800; font-size: 0.9rem; margin-bottom: 10px; display: block; }
+        .flow-card h4 { margin-bottom: 12px; font-size: 1.1rem; }
+        .flow-card p { font-size: 0.9rem; color: var(--text-muted); }
 
         /* FORM SECTION */
-        .form-section {
-            padding: 80px 5%;
-            background: var(--section-light);
-        }
+        .form-section { padding: 80px 5%; background: white; }
+        .form-notice { max-width: 900px; margin: 0 auto 30px; background: #fff9e6; border: 1px solid var(--accent); padding: 20px; border-radius: 6px; text-align: center; font-size: 0.95rem; color: #856404; }
+        .form-embed-container { max-width: 900px; margin: 0 auto; min-height: 950px; border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; }
 
-        .form-notice {
-            max-width: 850px;
-            margin: 0 auto 30px;
-            background: #fff9e6;
-            border: 1px solid var(--accent);
-            padding: 20px;
-            border-radius: 6px;
-            text-align: center;
-            font-size: 0.95rem;
-            color: #856404;
-        }
-
-        .form-embed-container {
-            max-width: 850px;
-            margin: 0 auto;
-            background: #ffffff;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            overflow: hidden;
-            min-height: 950px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.05);
-        }
-
-        /* Other Styling */
-        .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; padding: 0 5% 80px; }
-        .benefit-card { text-align: center; padding: 40px; border: 1px solid var(--border-color); border-radius: 8px; }
-        .benefit-card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
-
-        .flow-container { padding: 80px 5%; background: var(--section-light); }
-        .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
-        .step-card { background: white; padding: 40px; border: 1px solid var(--border-color); position: relative; }
-        .step-num { color: var(--primary); font-weight: 800; font-size: 0.85rem; margin-bottom: 10px; display: block; }
-
+        /* INFO BOXES */
         .info-grid { display: grid; grid-template-columns: 1fr 1fr; padding: 80px 5%; gap: 40px; }
-        .info-box { padding: 40px; border: 1px solid var(--border-color); background: white; }
+        .info-box { padding: 40px; border: 1px solid var(--border-color); background: white; border-top: 4px solid var(--primary); }
         .info-box h3 { color: var(--primary); margin-bottom: 20px; }
+        .list-item { margin-bottom: 10px; padding-left: 20px; position: relative; }
+        .list-item::before { content: "•"; color: var(--primary); position: absolute; left: 0; font-weight: bold; }
 
+        /* ACCORDION */
         .accordion-wrapper { max-width: 900px; margin: 0 auto 100px; padding: 0 5%; }
         .accordion-item { border-bottom: 1px solid var(--border-color); }
         .accordion-header { width: 100%; padding: 22px; background: none; border: none; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: 600; text-align: left; }
@@ -170,7 +106,7 @@
 
         @media (max-width: 992px) {
             .hero { flex-direction: column; text-align: center; }
-            .steps-grid, .info-grid { grid-template-columns: 1fr; }
+            .flow-grid, .info-grid { grid-template-columns: 1fr; }
             .hero-content h1 { font-size: 2.2rem; }
         }
     </style>
@@ -182,139 +118,131 @@
         <img src="https://framerusercontent.com/images/K3a8MikP9BPHa1BCvaXBmKAGOU.png?scale-down-to=2048&width=2735&height=1893" alt="Yayasan Peneraju">
         <img src="https://static.wixstatic.com/media/d17970_e2779e8237ce49b6bd845f2a75c1d9b7~mv2.png/v1/fill/w_624,h_90,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/JS%20Full_typeface%20side_edited.png" alt="JSKILLS">
     </div>
-    <img src="https://www.eccouncil.org/wp-content/uploads/2022/04/ceh-logo-vector.png" alt="CEH" style="height: 35px;">
+    <div style="font-weight: 700; color: var(--primary); font-size: 0.8rem; text-transform: uppercase;">Gen AI & Prompt Engineering</div>
 </nav>
 
 <section class="hero">
     <div class="hero-content">
-        <p style="color: var(--primary); font-weight: 700; text-transform: uppercase; margin-bottom: 10px; letter-spacing: 1px;">Fully Funded Scholarship</p>
-        <h1>YP ALTI - EC-Council Certified Ethical Hacker</h1>
-        <p class="hero-description">The industry standard for ethical hacking. We provide full funding for Malaysian Bumiputera talents to become globally certified cybersecurity experts.</p>
-        <a href="#apply-now" class="cta-btn-hero">Apply For Eligibility</a>
+        <p style="color: var(--primary); font-weight: 700; text-transform: uppercase; margin-bottom: 10px; letter-spacing: 1px;">Supported through YP ALTI</p>
+        <h1>Gen AI & Prompt Engineering Program</h1>
+        <p class="hero-description">Master real-world application of Generative AI. Empowering Bumiputera talent with prompt engineering techniques to scale careers in line with Malaysia’s national AI agenda.</p>
+        <a href="#apply-now" class="cta-btn-hero">Apply Now</a>
     </div>
     <div class="hero-image">
-        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800" alt="Cybersecurity Training">
+        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800" alt="Artificial Intelligence">
     </div>
 </section>
 
-<section class="benefits-section">
+<section class="flow-section">
     <div class="section-header">
-        <h2>Professional Benefits</h2>
-        <p>Advance your career with elite credentials.</p>
+        <h2>How to Apply?</h2>
     </div>
-    <div class="benefits-grid">
-        <div class="benefit-card">
-            <i class="fas fa-globe-asia"></i>
-            <h4>Global Standard</h4>
-            <p>CEH is the world's most advanced certified ethical hacking course.</p>
+    <div class="flow-grid">
+        <div class="flow-card">
+            <span class="flow-num">STEP 01</span>
+            <h4>Apply Through JSKILLS</h4>
+            <p>Submit your application via the official Registration Form on this page.</p>
         </div>
-        <div class="benefit-card">
-            <i class="fas fa-user-graduate"></i>
-            <h4>Full Coverage</h4>
-            <p>Scholarship covers all training, certification, and examination fees.</p>
+        <div class="flow-card">
+            <span class="flow-num">STEP 02</span>
+            <h4>Review & Acceptance</h4>
+            <p>JSKILLS Project Team reviews your application within 3 days. Qualifying candidates receive a Letter of Acceptance.</p>
         </div>
-        <div class="benefit-card">
-            <i class="fas fa-chart-line"></i>
-            <h4>Career Path</h4>
-            <p>Direct entry into high-demand security roles within top-tier corporations.</p>
+        <div class="flow-card">
+            <span class="flow-num">STEP 03</span>
+            <h4>Financing Application</h4>
+            <p>Use your Letter of Acceptance at Peneraju.org. Ensure you CTC Birth Certificate, NRIC, and Bank Statement.</p>
+        </div>
+        <div class="flow-card">
+            <span class="flow-num">STEP 04</span>
+            <h4>Approval within 30 Days</h4>
+            <p>Receive an Invoice from JSKILLS. Complete your EFSA with ALTI LO and upload all within 7 days.</p>
+        </div>
+        <div class="flow-card">
+            <span class="flow-num">STEP 05</span>
+            <h4>Receive Funds</h4>
+            <p>Funds disbursed to your Bank Account within 20 days. Proceed to pay back to JSKILLS to finalize registration.</p>
+        </div>
+        <div class="flow-card">
+            <span class="flow-num">STEP 06</span>
+            <h4>Start Your Training</h4>
+            <p>Begin your certification journey with no financial stress and full professional support.</p>
         </div>
     </div>
 </section>
 
 <section class="form-section" id="apply-now">
     <div class="section-header">
-        <h2>Eligibility Assessment</h2>
-        <p>Complete the official application form below. Ensure your phone number starts with +60.</p>
+        <h2>Program Registration</h2>
+        <p>Complete the form below to begin Step 1 of your application.</p>
     </div>
 
-    <div class="form-embed-container" style="max-width: 900px; padding: 10px;">
-<iframe
-    src="https://campaign.revops-center.com/widget/form/m9Y5v7RnF8IwzJEMbVv9"
-    style="width:100%;height:100%;border:none;border-radius:3px"
-    id="inline-m9Y5v7RnF8IwzJEMbVv9" 
-    data-layout="{'id':'INLINE'}"
-    data-trigger-type="alwaysShow"
-    data-trigger-value=""
-    data-activation-type="alwaysActivated"
-    data-activation-value=""
-    data-deactivation-type="neverDeactivate"
-    data-deactivation-value=""
-    data-form-name="Yayasan PENERAJU Form"
-    data-height="934"
-    data-layout-iframe-id="inline-m9Y5v7RnF8IwzJEMbVv9"
-    data-form-id="m9Y5v7RnF8IwzJEMbVv9"
-    title="Yayasan PENERAJU Form"
+    <div class="form-notice">
+        <strong>Important:</strong> Please ensure your mobile number starts with <strong>+60</strong> (e.g., +60123456789) for automated verification.
+    </div>
+
+    <div class="form-embed-container">
+        <!-- Re-structured iframe for better visibility -->
+        <iframe
+            src="https://campaign.revops-center.com/widget/form/m9Y5v7RnF8IwzJEMbVv9"
+            style="width:100%; height:934px; border:none; border-radius:3px; display: block;"
+            id="inline-m9Y5v7RnF8IwzJEMbVv9" 
+            data-layout="{'id':'INLINE'}"
+            data-trigger-type="alwaysShow"
+            data-form-name="Yayasan PENERAJU Form"
+            data-height="934"
+            data-layout-iframe-id="inline-m9Y5v7RnF8IwzJEMbVv9"
+            data-form-id="m9Y5v7RnF8IwzJEMbVv9"
+            title="Yayasan PENERAJU Form"
+            allow="phone-number; geolocation"
         >
-</iframe>
-<script src="https://campaign.revops-center.com/js/form_embed.js"></script>
-    </div>
-</section>
-
-<section class="flow-container">
-    <div class="section-header">
-        <h2>Application Flow</h2>
-    </div>
-    <div class="steps-grid">
-        <div class="step-card"><span class="step-num">STEP 01</span><h4>Submit Form</h4><p>Complete the assessment form above.</p></div>
-        <div class="step-card"><span class="step-num">STEP 02</span><h4>JSKILLS Review</h4><p>Receive your Letter of Acceptance within 3 days if qualified.</p></div>
-        <div class="step-card"><span class="step-num">STEP 03</span><h4>Peneraju financing</h4><p>Apply at Peneraju.org with CTC of Birth Cert, NRIC, and Bank Statement.</p></div>
-        <div class="step-card"><span class="step-num">STEP 04</span><h4>Approval</h4><p>Get approved within 30 days and complete EFSA.</p></div>
-        <div class="step-card"><span class="step-num">STEP 05</span><h4>Disbursement</h4><p>Receive funds within 20 days and finalize payment to JSKILLS.</p></div>
-        <div class="step-card"><span class="step-num">STEP 06</span><h4>Training</h4><p>Start your professional certification journey.</p></div>
+        </iframe>
+        <script src="https://campaign.revops-center.com/js/form_embed.js"></script>
     </div>
 </section>
 
 <section class="info-grid">
     <div class="info-box">
-        <h3>Eligibility & Coverage</h3>
-        <p>Open to Bumiputera Malaysian citizens aged 16+. Coverage includes tuition, exams, certifications, and professional allowances.*</p>
+        <h3>Eligibility Criteria</h3>
+        <div class="list-item">Malaysian Bumiputera.</div>
+        <div class="list-item">Active individual bank account under applicant’s name.</div>
+        <div class="list-item">Diploma qualification with minimum 1 year related experience or equivalent.</div>
+        <div class="list-item">Be able to commit fully to the program duration.</div>
     </div>
-    <div class="info-box">
-        <h3>Alumni Criteria</h3>
-        <p>Previous YP recipients must have repaid 50% of funding. Total lifetime funding limit is capped at RM150,000.</p>
+    <div class="info-box" style="border-top-color: var(--accent);">
+        <h3>Investment & Structure</h3>
+        <div class="list-item"><strong>Program Fee:</strong> RM3,500.00 (Inclusive of Exam & 8% SST).</div>
+        <div class="list-item"><strong>Duration:</strong> 5 Days (Fully Online).</div>
+        <div class="list-item"><strong>Financing:</strong> Easy Payment Plan (EPP) and YP ALTI support available.</div>
+        <div class="list-item"><strong>Who:</strong> Professionals, Diploma/Degree holders, and Business leaders.</div>
     </div>
 </section>
 
-<div class="section-header"><h2>Course Curriculum</h2></div>
-<div class="accordion-wrapper" id="accordion"></div>
+<div class="section-header"><h2>Learning Outcomes</h2></div>
+<div class="accordion-wrapper">
+    <div class="accordion-item">
+        <button class="accordion-header">Strategic Prompt Design <i class="fas fa-plus"></i></button>
+        <div class="accordion-content"><div class="accordion-body">Design structured and effective prompts for diverse business scenarios to maximize accuracy.</div></div>
+    </div>
+    <div class="accordion-item">
+        <button class="accordion-header">Workflow Optimization <i class="fas fa-plus"></i></button>
+        <div class="accordion-content"><div class="accordion-body">Optimize AI responses for clarity and accuracy to enhance strategic productivity.</div></div>
+    </div>
+    <div class="accordion-item">
+        <button class="accordion-header">Business Integration <i class="fas fa-plus"></i></button>
+        <div class="accordion-content"><div class="accordion-body">Integrate AI tools and insights into operational decision-making and business simulations.</div></div>
+    </div>
+</div>
 
 <footer>
-    <p>&copy; 2024 JSKILLS & Yayasan Peneraju Authorized Training Partners.</p>
+    <p>&copy; 2024 Johor Skills Development Centre (JSKILLS) & Yayasan Peneraju. All Rights Reserved.</p>
 </footer>
 
 <script>
-    const modules = [
-        { t: "Module 1: Intro to Ethical Hacking", d: "Fundamentals of info security and legal procedures." },
-        { t: "Module 2: Footprinting & Reconnaissance", d: "Pre-attack techniques and latest reconnaissance tools." },
-        { t: "Module 3: Scanning Networks", d: "Network scanning techniques and countermeasures." },
-        { t: "Module 4: Enumeration", d: "BGP and NFS exploits and associated defenses." },
-        { t: "Module 5: Vulnerability Analysis", d: "Identifying loopholes in networks and systems." },
-        { t: "Module 6: System Hacking", d: "Methodologies for steganography and covering tracks." },
-        { t: "Module 7: Malware Threats", d: "Analysis of Trojans, viruses, and APT fileless malware." },
-        { t: "Module 8: Sniffing", d: "Packet sniffing techniques and vulnerability discovery." },
-        { t: "Module 9: Social Engineering", d: "Human-level vulnerabilities and identity theft auditing." },
-        { t: "Module 10: Denial-of-Service", d: "DoS/DDoS attack techniques and tools." },
-        { t: "Module 11: Session Hijacking", d: "Authentication and authorization weakness discovery." },
-        { t: "Module 12: Evading IDS/Firewalls", d: "Tools to audit network perimeters and evasion techniques." },
-        { t: "Module 13: Hacking Web Servers", d: "Audit methodologies for web server infrastructures." },
-        { t: "Module 14: Hacking Web Applications", d: "Vulnerability methodology for web applications." },
-        { t: "Module 15: SQL Injection", d: "SQLi attack techniques and evasion." },
-        { t: "Module 16: Hacking Wireless Networks", d: "Threats and tools for wireless network security." },
-        { t: "Module 17: Hacking Mobile Platforms", d: "Android and iOS security and attack vectors." },
-        { t: "Module 18: IoT Hacking", d: "Operational technology (OT) and IoT attack methods." },
-        { t: "Module 19: Cloud Computing", d: "Container security and serverless computing threats." },
-        { t: "Module 20: Cryptography", d: "Encryption algorithms, PKI, and cryptanalysis tools." }
-    ];
-
-    const acc = document.getElementById('accordion');
-    modules.forEach((m) => {
-        const item = document.createElement('div');
-        item.className = 'accordion-item';
-        item.innerHTML = `<button class="accordion-header">${m.t} <i class="fas fa-plus"></i></button>
-                          <div class="accordion-content"><div class="accordion-body">${m.d}</div></div>`;
-        acc.appendChild(item);
-        item.querySelector('.accordion-header').addEventListener('click', function() {
-            const content = this.nextElementSibling;
+    // Accordion
+    document.querySelectorAll('.accordion-header').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const content = btn.nextElementSibling;
             const isOpen = content.style.maxHeight;
             document.querySelectorAll('.accordion-content').forEach(c => c.style.maxHeight = null);
             if (!isOpen) content.style.maxHeight = content.scrollHeight + "px";
