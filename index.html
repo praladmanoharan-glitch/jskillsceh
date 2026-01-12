@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gen AI & Prompt Engineering - YP ALTI | JSKILLS</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Master Gen AI & Prompt Engineering - YP ALTI | JSKILLS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
@@ -50,64 +50,102 @@
             justify-content: space-between;
             padding: 100px 5%;
             gap: 60px;
-            background: var(--bg-white);
+            background: linear-gradient(to right, #ffffff, #fffdf7);
         }
 
         .hero-content { flex: 1; }
-        .hero-content h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 25px; }
-        .hero-content p.hero-description { font-size: 1.15rem; color: var(--text-muted); margin-bottom: 50px; max-width: 600px; }
+        .hero-content h1 { 
+            font-size: 3.5rem; 
+            line-height: 1.1; 
+            margin-bottom: 25px; 
+            font-weight: 800;
+        }
 
-        .hero-image { flex: 1; }
-        .hero-image img { width: 100%; border-radius: 4px; box-shadow: 20px 20px 0px var(--accent); }
+        .hero-content span.highlight { color: var(--primary); }
+
+        .hero-content p.hero-description { 
+            font-size: 1.25rem; 
+            color: var(--text-muted); 
+            margin-bottom: 50px; /* Space for button */
+            max-width: 600px; 
+        }
+
+        .hero-image { flex: 1; text-align: right; }
+        .hero-image img { 
+            width: 100%; 
+            max-width: 550px;
+            border-radius: 12px; 
+            box-shadow: 25px 25px 0px var(--accent); 
+        }
 
         .cta-btn-hero {
             background: var(--primary);
             color: white;
-            padding: 20px 40px;
+            padding: 20px 45px;
             text-decoration: none;
             border-radius: 4px;
-            font-weight: 700;
+            font-weight: 800;
             display: inline-block;
+            font-size: 1.1rem;
             transition: 0.3s;
         }
 
-        /* APPLICATION FLOW */
-        .flow-section { padding: 80px 5%; background: var(--section-light); }
-        .section-header { text-align: center; margin-bottom: 50px; }
-        .section-header h2 { font-size: 2.2rem; position: relative; display: inline-block; padding-bottom: 15px; }
-        .section-header h2::after { content: ''; width: 80px; height: 4px; background: var(--accent); position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
+        /* GAIN/VALUE SECTION */
+        .value-section { padding: 100px 5%; background: var(--text-main); color: white; }
+        .value-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px; }
+        .value-card { padding: 40px; border-top: 4px solid var(--accent); background: rgba(255,255,255,0.05); }
+        .value-card i { font-size: 2rem; color: var(--accent); margin-bottom: 20px; display: block; }
+        .value-card h3 { margin-bottom: 15px; font-size: 1.4rem; }
+        .value-card p { color: #ccc; font-size: 0.95rem; }
 
-        .flow-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
-        .flow-card { background: white; padding: 30px; border: 1px solid var(--border-color); border-radius: 4px; position: relative; }
-        .flow-num { color: var(--primary); font-weight: 800; font-size: 0.9rem; margin-bottom: 10px; display: block; }
-        .flow-card h4 { margin-bottom: 12px; font-size: 1.1rem; }
-        .flow-card p { font-size: 0.9rem; color: var(--text-muted); }
+        /* OUTCOMES */
+        .section-header { text-align: center; margin-bottom: 60px; padding: 0 5%; }
+        .section-header h2 { font-size: 2.8rem; font-weight: 800; }
+        .section-header span { color: var(--primary); }
 
-        /* FORM SECTION */
-        .form-section { padding: 80px 5%; background: white; }
-        .form-notice { max-width: 900px; margin: 0 auto 30px; background: #fff9e6; border: 1px solid var(--accent); padding: 20px; border-radius: 6px; text-align: center; font-size: 0.95rem; color: #856404; }
-        .form-embed-container { max-width: 900px; margin: 0 auto; min-height: 950px; border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; }
+        .outcomes-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 25px; 
+            padding: 0 5% 100px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .outcome-item { display: flex; gap: 20px; padding: 30px; border: 1px solid var(--border-color); border-radius: 8px; }
+        .outcome-item i { color: var(--primary); font-size: 1.5rem; }
 
-        /* INFO BOXES */
-        .info-grid { display: grid; grid-template-columns: 1fr 1fr; padding: 80px 5%; gap: 40px; }
-        .info-box { padding: 40px; border: 1px solid var(--border-color); background: white; border-top: 4px solid var(--primary); }
-        .info-box h3 { color: var(--primary); margin-bottom: 20px; }
-        .list-item { margin-bottom: 10px; padding-left: 20px; position: relative; }
-        .list-item::before { content: "•"; color: var(--primary); position: absolute; left: 0; font-weight: bold; }
+        /* FORM SECTION - REINTEGRATED */
+        .form-section { padding: 100px 5%; background: var(--section-light); }
+        .form-embed-container { 
+            max-width: 934px; 
+            margin: 0 auto; 
+            background: white; 
+            min-height: 950px; /* Important for form visibility */
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
 
-        /* ACCORDION */
-        .accordion-wrapper { max-width: 900px; margin: 0 auto 100px; padding: 0 5%; }
-        .accordion-item { border-bottom: 1px solid var(--border-color); }
-        .accordion-header { width: 100%; padding: 22px; background: none; border: none; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: 600; text-align: left; }
-        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
-        .accordion-body { padding: 20px; background: #fafafa; color: var(--text-muted); }
+        /* INFO & ELIGIBILITY */
+        .info-grid { display: grid; grid-template-columns: 1fr 1fr; padding: 100px 5%; gap: 40px; }
+        .info-box { padding: 50px; border-radius: 8px; border: 1px solid var(--border-color); background: white; }
+        .info-box h3 { color: var(--primary); margin-bottom: 30px; font-size: 1.8rem; border-left: 5px solid var(--accent); padding-left: 20px;}
+        .list-item { margin-bottom: 15px; padding-left: 30px; position: relative; font-weight: 500; }
+        .list-item::before { content: "\f058"; font-family: "Font Awesome 5 Free"; font-weight: 900; color: var(--primary); position: absolute; left: 0; }
 
-        footer { padding: 60px 5%; border-top: 1px solid var(--border-color); text-align: center; font-size: 0.9rem; color: var(--text-muted); }
+        /* FLOW SECTION */
+        .flow-section { padding: 100px 5%; background: var(--text-main); color: white; }
+        .flow-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 50px; }
+        .flow-card { padding: 30px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); }
+        .flow-num { font-size: 2rem; font-weight: 900; color: var(--accent); margin-bottom: 15px; display: block; }
+
+        footer { padding: 60px 5%; text-align: center; border-top: 1px solid var(--border-color); color: var(--text-muted); }
 
         @media (max-width: 992px) {
             .hero { flex-direction: column; text-align: center; }
-            .flow-grid, .info-grid { grid-template-columns: 1fr; }
-            .hero-content h1 { font-size: 2.2rem; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .hero-image { text-align: center; }
+            .outcomes-grid, .info-grid, .flow-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -118,137 +156,151 @@
         <img src="https://framerusercontent.com/images/K3a8MikP9BPHa1BCvaXBmKAGOU.png?scale-down-to=2048&width=2735&height=1893" alt="Yayasan Peneraju">
         <img src="https://static.wixstatic.com/media/d17970_e2779e8237ce49b6bd845f2a75c1d9b7~mv2.png/v1/fill/w_624,h_90,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/JS%20Full_typeface%20side_edited.png" alt="JSKILLS">
     </div>
-    <div style="font-weight: 700; color: var(--primary); font-size: 0.8rem; text-transform: uppercase;">Gen AI & Prompt Engineering</div>
+    <div style="font-weight: 800; color: var(--primary); font-size: 0.8rem; letter-spacing: 1px;">GEN AI MASTERY</div>
 </nav>
 
 <section class="hero">
     <div class="hero-content">
-        <p style="color: var(--primary); font-weight: 700; text-transform: uppercase; margin-bottom: 10px; letter-spacing: 1px;">Supported through YP ALTI</p>
-        <h1>Gen AI & Prompt Engineering Program</h1>
-        <p class="hero-description">Master real-world application of Generative AI. Empowering Bumiputera talent with prompt engineering techniques to scale careers in line with Malaysia’s national AI agenda.</p>
-        <a href="#apply-now" class="cta-btn-hero">Apply Now</a>
+        <p style="color: var(--primary); font-weight: 800; text-transform: uppercase; margin-bottom: 15px; letter-spacing: 2px;">Supported by YP ALTI</p>
+        <h1>Master Gen AI & <span class="highlight">Prompt Engineering</span></h1>
+        <p class="hero-description">Position yourself at the forefront of AI adoption. Empowering Bumiputera talent with high-demand skills to scale careers in line with Malaysia’s national workforce agenda.</p>
+        <a href="#apply-now" class="cta-btn-hero">Apply For Eligibility</a>
     </div>
     <div class="hero-image">
-        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800" alt="Artificial Intelligence">
+        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800" alt="Artificial Intelligence Professional">
     </div>
 </section>
 
-<section class="flow-section">
+<!-- THE GAIN SECTION -->
+<section class="value-section">
+    <div class="section-header" style="text-align: left; color: white;">
+        <h2 style="color: white;">Why This Program <span>Matters</span></h2>
+        <p style="color: #ccc; margin-top: 15px;">The true value of AI lies not in the technology itself — but in how you use it.</p>
+    </div>
+    <div class="value-grid">
+        <div class="value-card">
+            <i class="fas fa-microchip"></i>
+            <h3>Precision Control</h3>
+            <p>Go beyond basic interactions. Learn to control AI outputs with precision using structured Prompt Engineering techniques.</p>
+        </div>
+        <div class="value-card">
+            <i class="fas fa-chart-line"></i>
+            <h3>Scale Productivity</h3>
+            <p>Increase productivity and improve decision-making quality across all workflows without technical complexity.</p>
+        </div>
+        <div class="value-card">
+            <h3>Future-Ready</h3>
+            <p>Align your skills with Malaysia’s national AI workforce agenda for 2026 and secure your professional future.</p>
+        </div>
+    </div>
+</section>
+
+<!-- OUTCOMES -->
+<section class="outcomes-section">
     <div class="section-header">
-        <h2>How to Apply?</h2>
+        <h2>Key Learning <span>Outcomes</span></h2>
+        <p>Skills you will master during this 5-day professional upskilling program</p>
     </div>
-    <div class="flow-grid">
-        <div class="flow-card">
-            <span class="flow-num">STEP 01</span>
-            <h4>Apply Through JSKILLS</h4>
-            <p>Submit your application via the official Registration Form on this page.</p>
+    <div class="outcomes-grid">
+        <div class="outcome-item">
+            <i class="fas fa-check"></i>
+            <div>
+                <h4>Prompt Architecture</h4>
+                <p>Design structured and effective prompts for diverse business scenarios.</p>
+            </div>
         </div>
-        <div class="flow-card">
-            <span class="flow-num">STEP 02</span>
-            <h4>Review & Acceptance</h4>
-            <p>JSKILLS Project Team reviews your application within 3 days. Qualifying candidates receive a Letter of Acceptance.</p>
+        <div class="outcome-item">
+            <i class="fas fa-check"></i>
+            <div>
+                <h4>AI Optimization</h4>
+                <p>Optimize AI responses for clarity, accuracy, and professional reliability.</p>
+            </div>
         </div>
-        <div class="flow-card">
-            <span class="flow-num">STEP 03</span>
-            <h4>Financing Application</h4>
-            <p>Use your Letter of Acceptance at Peneraju.org. Ensure you CTC Birth Certificate, NRIC, and Bank Statement.</p>
+        <div class="outcome-item">
+            <i class="fas fa-check"></i>
+            <div>
+                <h4>Business Automation</h4>
+                <p>Apply GenAI tools to enhance productivity and professional automation.</p>
+            </div>
         </div>
-        <div class="flow-card">
-            <span class="flow-num">STEP 04</span>
-            <h4>Approval within 30 Days</h4>
-            <p>Receive an Invoice from JSKILLS. Complete your EFSA with ALTI LO and upload all within 7 days.</p>
-        </div>
-        <div class="flow-card">
-            <span class="flow-num">STEP 05</span>
-            <h4>Receive Funds</h4>
-            <p>Funds disbursed to your Bank Account within 20 days. Proceed to pay back to JSKILLS to finalize registration.</p>
-        </div>
-        <div class="flow-card">
-            <span class="flow-num">STEP 06</span>
-            <h4>Start Your Training</h4>
-            <p>Begin your certification journey with no financial stress and full professional support.</p>
+        <div class="outcome-item">
+            <i class="fas fa-check"></i>
+            <div>
+                <h4>Strategic Integration</h4>
+                <p>Confidently leverage AI technologies within operational and strategic roles.</p>
+            </div>
         </div>
     </div>
 </section>
 
+<!-- APPLICATION FORM - ORIGINAL EMBED INTEGRATED -->
 <section class="form-section" id="apply-now">
     <div class="section-header">
-        <h2>Program Registration</h2>
-        <p>Complete the form below to begin Step 1 of your application.</p>
+        <h2>Start Your <span>Application</span></h2>
+        <p>Step 1: Complete the registration form below to check your eligibility.</p>
     </div>
-
-    <div class="form-notice">
-        <strong>Important:</strong> Please ensure your mobile number starts with <strong>+60</strong> (e.g., +60123456789) for automated verification.
-    </div>
-
     <div class="form-embed-container">
-        <!-- Re-structured iframe for better visibility -->
+        <!-- YOUR ORIGINAL FORM EMBED CODE START -->
         <iframe
             src="https://campaign.revops-center.com/widget/form/m9Y5v7RnF8IwzJEMbVv9"
-            style="width:100%; height:934px; border:none; border-radius:3px; display: block;"
+            style="width:100%;height:100%;border:none;border-radius:3px"
             id="inline-m9Y5v7RnF8IwzJEMbVv9" 
             data-layout="{'id':'INLINE'}"
             data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
             data-form-name="Yayasan PENERAJU Form"
             data-height="934"
             data-layout-iframe-id="inline-m9Y5v7RnF8IwzJEMbVv9"
             data-form-id="m9Y5v7RnF8IwzJEMbVv9"
             title="Yayasan PENERAJU Form"
-            allow="phone-number; geolocation"
         >
         </iframe>
         <script src="https://campaign.revops-center.com/js/form_embed.js"></script>
+        <!-- YOUR ORIGINAL FORM EMBED CODE END -->
     </div>
 </section>
 
+<!-- ELIGIBILITY & STRUCTURE -->
 <section class="info-grid">
     <div class="info-box">
         <h3>Eligibility Criteria</h3>
-        <div class="list-item">Malaysian Bumiputera.</div>
-        <div class="list-item">Active individual bank account under applicant’s name.</div>
-        <div class="list-item">Diploma qualification with minimum 1 year related experience or equivalent.</div>
+        <div class="list-item">Be a Malaysian Bumiputera.</div>
+        <div class="list-item">Hold an active individual bank account under applicant’s name.</div>
+        <div class="list-item">Possess a Diploma with min. 1 year related experience (or equivalent).</div>
         <div class="list-item">Be able to commit fully to the program duration.</div>
     </div>
-    <div class="info-box" style="border-top-color: var(--accent);">
-        <h3>Investment & Structure</h3>
-        <div class="list-item"><strong>Program Fee:</strong> RM3,500.00 (Inclusive of Exam & 8% SST).</div>
+    <div class="info-box">
+        <h3>Program Overview</h3>
         <div class="list-item"><strong>Duration:</strong> 5 Days (Fully Online).</div>
-        <div class="list-item"><strong>Financing:</strong> Easy Payment Plan (EPP) and YP ALTI support available.</div>
-        <div class="list-item"><strong>Who:</strong> Professionals, Diploma/Degree holders, and Business leaders.</div>
+        <div class="list-item"><strong>Fee:</strong> RM3,500.00 (Incl. Exam Fee & 8% SST).</div>
+        <div class="list-item"><strong>Financial Support:</strong> YP ALTI financing & EPP available.</div>
+        <div class="list-item"><strong>For:</strong> Professionals, Diploma/Degree holders, & Business leaders.</div>
     </div>
 </section>
 
-<div class="section-header"><h2>Learning Outcomes</h2></div>
-<div class="accordion-wrapper">
-    <div class="accordion-item">
-        <button class="accordion-header">Strategic Prompt Design <i class="fas fa-plus"></i></button>
-        <div class="accordion-content"><div class="accordion-body">Design structured and effective prompts for diverse business scenarios to maximize accuracy.</div></div>
+<!-- APPLICATION FLOW -->
+<section class="flow-section">
+    <div class="section-header" style="color: white;">
+        <h2 style="color: white;">How To <span>Apply</span></h2>
+        <p style="color: #ccc;">Follow these 6 steps to start your training at JSKILLS</p>
     </div>
-    <div class="accordion-item">
-        <button class="accordion-header">Workflow Optimization <i class="fas fa-plus"></i></button>
-        <div class="accordion-content"><div class="accordion-body">Optimize AI responses for clarity and accuracy to enhance strategic productivity.</div></div>
+    <div class="flow-grid">
+        <div class="flow-card"><span class="flow-num">1</span><h4>Apply at JSKILLS</h4><p>Submit your application via the form above.</p></div>
+        <div class="flow-card"><span class="flow-num">2</span><h4>Acceptance</h4><p>JSKILLS reviews your application and issues a Letter of Acceptance within 3 days.</p></div>
+        <div class="flow-card"><span class="flow-num">3</span><h4>Peneraju financing</h4><p>Apply at Peneraju.org with CTC copies of Birth Cert, NRIC, and Bank Statement.</p></div>
+        <div class="flow-card"><span class="flow-num">4</span><h4>Approval</h4><p>Receive approval within 30 days. Complete EFSA with ALTI LO within 7 days.</p></div>
+        <div class="flow-card"><span class="flow-num">5</span><h4>Funds</h4><p>Funds disbursed to your account within 20 days. Finalize payment to JSKILLS.</p></div>
+        <div class="flow-card"><span class="flow-num">6</span><h4>Start</h4><p>Begin your certification journey with no financial stress.</p></div>
     </div>
-    <div class="accordion-item">
-        <button class="accordion-header">Business Integration <i class="fas fa-plus"></i></button>
-        <div class="accordion-content"><div class="accordion-body">Integrate AI tools and insights into operational decision-making and business simulations.</div></div>
-    </div>
-</div>
+</section>
 
 <footer>
     <p>&copy; 2024 Johor Skills Development Centre (JSKILLS) & Yayasan Peneraju. All Rights Reserved.</p>
 </footer>
-
-<script>
-    // Accordion
-    document.querySelectorAll('.accordion-header').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const content = btn.nextElementSibling;
-            const isOpen = content.style.maxHeight;
-            document.querySelectorAll('.accordion-content').forEach(c => c.style.maxHeight = null);
-            if (!isOpen) content.style.maxHeight = content.scrollHeight + "px";
-        });
-    });
-</script>
 
 </body>
 </html>
